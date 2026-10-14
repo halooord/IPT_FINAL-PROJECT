@@ -17,7 +17,7 @@
             <table class="table table-bordered table-hover align-middle">
                 <thead class="table-primary">
                     <tr>
-                        <th>Employee No.</th>
+                        <th>Employee ID</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Specialization</th>

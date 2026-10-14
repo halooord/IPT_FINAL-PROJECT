@@ -27,7 +27,7 @@ class StudentController extends Controller
             'first_name' => 'required|string|max:100',
             'last_name' => 'required|string|max:100',
             'email' => 'required|email|max:255|unique:students,email',
-            'phone' => 'nullable|string|max:30',
+            'phone' => ['nullable', 'string', 'max:30', 'regex:/^[0-9]+$/'],
             'program' => 'required|string|max:100',
             'year_level' => 'required|string|max:50',
         ]);
@@ -66,7 +66,7 @@ class StudentController extends Controller
                 'max:255',
                 Rule::unique('students', 'email')->ignore($student->id),
             ],
-            'phone' => 'nullable|string|max:30',
+            'phone' => ['nullable', 'string', 'max:30', 'regex:/^[0-9]+$/'],
             'program' => 'required|in:BSIT,BSHM,BSED,BSN,BSCRIM,BSTM,BSBA,BSMA',
             'year_level' => 'required|string|max:50',
         ]);

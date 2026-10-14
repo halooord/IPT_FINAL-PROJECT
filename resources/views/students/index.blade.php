@@ -17,7 +17,7 @@
             <table class="table table-bordered table-hover align-middle">
                 <thead class="table-primary">
                     <tr>
-                        <th>Student No.</th>
+                        <th>Student ID</th>
                         <th>Full Name</th>
                         <th>Email</th>
                         <th>Program</th>

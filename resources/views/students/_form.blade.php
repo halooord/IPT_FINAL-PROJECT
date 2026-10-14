@@ -1,7 +1,7 @@
 
 <div class="row">
     <div class="col-md-6 mb-3">
-        <label class="form-label" for="student_number">Student Number</label>
+        <label class="form-label" for="student_number">Student ID</label>
         <input type="text" name="student_number" id="student_number"
             value="{{ old('student_number', $student->student_number ?? '') }}"
             class="form-control" required>
@@ -42,7 +42,7 @@
 
     <div class="col-md-6 mb-3">
         <label class="form-label" for="phone">Phone</label>
-        <input type="text" name="phone" id="phone"
+        <input type="tel" name="phone" id="phone" inputmode="numeric" pattern="[0-9]*"
             value="{{ old('phone', $student->phone ?? '') }}"
             class="form-control">
         @error('phone')

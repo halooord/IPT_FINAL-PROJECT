@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-6 mb-3">
-        <label class="form-label">Employee Number</label>
+        <label class="form-label">Employee ID</label>
         <input name="employee_number" class="form-control" required
                value="{{ old('employee_number', $counselor->employee_number ?? '') }}">
         @error('employee_number') <div class="text-danger">{{ $message }}</div> @enderror
@@ -29,7 +29,7 @@
 
     <div class="col-md-6 mb-3">
         <label class="form-label">Phone</label>
-        <input name="phone" class="form-control"
+        <input type="tel" name="phone" class="form-control" inputmode="numeric" pattern="[0-9]*"
                value="{{ old('phone', $counselor->phone ?? '') }}">
         @error('phone') <div class="text-danger">{{ $message }}</div> @enderror
     </div>

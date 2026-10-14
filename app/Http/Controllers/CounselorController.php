@@ -27,7 +27,7 @@ class CounselorController extends Controller
             'first_name' => 'required|string|max:100',
             'last_name' => 'required|string|max:100',
             'email' => 'required|email|max:255|unique:counselors,email',
-            'phone' => 'nullable|string|max:30',
+            'phone' => ['nullable', 'string', 'max:30', 'regex:/^[0-9]+$/'],
             'specialization' => 'required|string|max:150',
             'is_active' => 'required|boolean',
         ]);
@@ -63,7 +63,7 @@ class CounselorController extends Controller
                 'required', 'email', 'max:255',
                 Rule::unique('counselors', 'email')->ignore($counselor->id),
             ],
-            'phone' => 'nullable|string|max:30',
+            'phone' => ['nullable', 'string', 'max:30', 'regex:/^[0-9]+$/'],
             'specialization' => 'required|string|max:150',
             'is_active' => 'required|boolean',
         ]);
